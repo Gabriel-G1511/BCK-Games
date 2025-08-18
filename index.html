@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<!-- Define que o documento é HTML5 -->
+
+<html lang="pt-br">
+<!-- Início do documento HTML, com idioma configurado para português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 (suporta acentos e caracteres especiais) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site ser responsivo, ajustando à largura da tela do dispositivo -->
+
+    <title>Loja De Jogos</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo CSS externo para estilizar a página -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Otimiza o carregamento de fontes do Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Permite conexão antecipada com os servidores de fontes (melhora performance) -->
+</head>
+
+<body>
+    <!-- Corpo da página (conteúdo visível) -->
+
+    <header>
+        <!-- Cabeçalho do site -->
+        <h1>Bem Vindo a BCK Games</h1>
+        <!-- Título principal do cabeçalho -->
+
+        <nav>
+            <!-- Menu de navegação -->
+            <ul>
+                <!-- Lista de links -->
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Jogos</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Conteúdo principal do site -->
+
+        <section class="loja">
+            <!-- Seção sobre a loja -->
+                <img src="./loja.jpg" alt="foto da loja">
+            <!-- Subtítulo da seção -->
+
+            <a href="#">
+                            <h2>Sobre nossa Loja</h2>
+                <h3>
+                    <!-- Subtítulo -->
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    <br>
+                    Error officiis quos nihil illo, cumque velit adipisci aliquid.
+                </h3>
+            </a>
+        </section>
+    </main>
+    <!-- Eu havia fechado main no lugar errado,agora deu certo -->
+
+    <!-- Começo da seção de produtos -->
+    <section class="produtos">
+        <div class="produtos">
+            <!-- Container que agrupa todos os produtos -->
+
+            <h2>Nossos Produtos</h2>
+            <!-- Título da seção de produtos -->
+
+            <!-- Cada produto é um artigo independente -->
+            <article class="produto">
+                <img src="Aventura.jpg" alt="Produto 1">
+                <!-- Imagem do produto -->
+                <h3>Jogo Aventura</h3>
+                <!-- Nome do produto -->
+                <p>Explore mundos incríveis e viva aventuras épicas.</p>
+                <!-- Descrição do produto -->
+                <p class="preco">R$ 99,90</p>
+                <!-- Preço do produto -->
+                <button>Comprar</button>
+                <!-- Botão de compra -->
+            </article>
+
+            <article class="produto">
+                <img src="./RPG.jpg" alt="Produto 2">
+                <h3>Jogo RPG</h3>
+                <p>Crie seu herói e desafie inimigos lendários.</p>
+                <p class="preco">R$ 149,90</p>
+                <button>Comprar</button>
+            </article>
+
+            <article class="produto">
+                <img src="./download.jpg" alt="Produto 3">
+                <h3>Jogo Corrida</h3>
+                <p>Dispute corridas eletrizantes em alta velocidade.</p>
+                <p class="preco">R$ 79,90</p>
+                <button>Comprar</button>
+            </article>
+
+            <article class="produto">
+                <img src="./Estrategia.jpg" alt="Produto 4">
+                <h3>Jogo Estratégia</h3>
+                <p>Planeje suas táticas e conquiste territórios.</p>
+                <p class="preco">R$ 129,90</p>
+                <button>Comprar</button>
+            </article>
+        </div>
+    </section>
+    <!-- Fim da seção de produtos -->
+
+    <footer>
+        <!-- Rodapé do site -->
+        <p>&copy; 2023 Loja De Jogos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
