@@ -1,122 +1,129 @@
-<!DOCTYPE html> 
-<!-- Define que o documento é HTML5 -->
-
+<!DOCTYPE html>
 <html lang="pt-br">
-<!-- Início do documento HTML, com idioma configurado para português do Brasil -->
-
 <head>
-    <meta charset="UTF-8">
-    <!-- Define a codificação de caracteres como UTF-8 (suporta acentos e caracteres especiais) -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Faz o site ser responsivo, ajustando à largura da tela do dispositivo -->
-
-    <title>Loja De Jogos</title>
-    <!-- Título que aparece na aba do navegador -->
-
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para responsividade em dispositivos móveis -->
+    <title>Portal de Notícias</title> <!-- Título da aba do navegador -->
+    
+    <!-- Link para o arquivo CSS local -->
     <link rel="stylesheet" href="style.css">
-    <!-- Importa o arquivo CSS externo para estilizar a página -->
-
+    
+    <!-- Pré-conexão para carregar as fontes do Google mais rápido -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Otimiza o carregamento de fontes do Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Permite conexão antecipada com os servidores de fontes (melhora performance) -->
+    
+    <!-- Fonte Roboto do Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
-
 <body>
-    <!-- Corpo da página (conteúdo visível) -->
-
     <header>
-        <!-- Cabeçalho do site -->
-        <h1>Bem Vindo a BCK Games</h1>
-        <!-- Título principal do cabeçalho -->
-
-        <nav>
-            <!-- Menu de navegação -->
-            <ul>
-                <!-- Lista de links -->
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Jogos</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Conteúdo principal do site -->
-
-        <section class="loja">
-            <!-- Seção sobre a loja -->
-                <img src="./loja.jpg" alt="foto da loja">
-            <!-- Subtítulo da seção -->
-
-            <a href="#">
-                            <h2>Sobre nossa Loja</h2>
-                <h3>
-                    <!-- Subtítulo -->
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    <br>
-                    Error officiis quos nihil illo, cumque velit adipisci aliquid.
-                </h3>
-            </a>
-        </section>
-    </main>
-    <!-- Eu havia fechado main no lugar errado,agora deu certo -->
-
-    <!-- Começo da seção de produtos -->
-    <section class="produtos">
-        <div class="produtos">
-            <!-- Container que agrupa todos os produtos -->
-
-            <h2>Nossos Produtos</h2>
-            <!-- Título da seção de produtos -->
-
-            <!-- Cada produto é um artigo independente -->
-            <article class="produto">
-                <img src="Aventura.jpg" alt="Produto 1">
-                <!-- Imagem do produto -->
-                <h3>Jogo Aventura</h3>
-                <!-- Nome do produto -->
-                <p>Explore mundos incríveis e viva aventuras épicas.</p>
-                <!-- Descrição do produto -->
-                <p class="preco">R$ 99,90</p>
-                <!-- Preço do produto -->
-                <button>Comprar</button>
-                <!-- Botão de compra -->
-            </article>
-
-            <article class="produto">
-                <img src="./RPG.jpg" alt="Produto 2">
-                <h3>Jogo RPG</h3>
-                <p>Crie seu herói e desafie inimigos lendários.</p>
-                <p class="preco">R$ 149,90</p>
-                <button>Comprar</button>
-            </article>
-
-            <article class="produto">
-                <img src="./download.jpg" alt="Produto 3">
-                <h3>Jogo Corrida</h3>
-                <p>Dispute corridas eletrizantes em alta velocidade.</p>
-                <p class="preco">R$ 79,90</p>
-                <button>Comprar</button>
-            </article>
-
-            <article class="produto">
-                <img src="./Estrategia.jpg" alt="Produto 4">
-                <h3>Jogo Estratégia</h3>
-                <p>Planeje suas táticas e conquiste territórios.</p>
-                <p class="preco">R$ 129,90</p>
-                <button>Comprar</button>
-            </article>
+        <div class="container">
+            <h1>Ebac News</h1>
+            <form>
+                <label for="busca" class="sr-only">Buscar:</label> <!-- Label escondida para acessibilidade -->
+                <input id="busca" type="search" placeholder="Pesquise no site"> <!-- Campo de busca -->
+                <button type="submit">Pesquisar</button> <!-- Botão para enviar busca -->
+            </form>
         </div>
-    </section>
-    <!-- Fim da seção de produtos -->
+        <div>
+            <button class="botao-menu" type="button">Abrir Menu</button> <!-- Botão que abre/esconde o menu no mobile -->
+        </div>
+        <nav class="container">
+            <ul class="menu">
+                <li>
+                    Esportes
+                    <ul class="submenu">
+                        <li><a href="#">Futebol</a></li>
+                        <li><a href="#">Basquete</a></li>
+                        <li><a href="#">Vôlei</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Economia
+                    <ul class="submenu">
+                        <li><a href="#">Bolsa de Valores</a></li>
+                        <li><a href="#">Imposto de Renda</a></li>
+                        <li><a href="#">Finanças Pessoais</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear"></div> <!-- Limpa floats para evitar bugs de layout -->
+        </nav>
+    </header>   
 
-    <footer>
-        <!-- Rodapé do site -->
-        <p>&copy; 2023 Loja De Jogos. Todos os direitos reservados.</p>
-    </footer>
+    <div class="container conteudo">
+        <main>
+            <section class="destaque">
+                <h2>Em Destaque</h2>
+                <article class="noticia">
+                    <a href="#">
+                        <img src="https://placehold.co/320x320" alt="Imagem de destaque genérica">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque quae eaque delectus cum autem asperiores optio reprehender</h3>
+                    </a>
+                </article>
+            </section>
+
+            <section class="noticias">
+                <h2>Últimas Notícias</h2>
+                <article class="noticia">
+                    <a href="#">
+                        <img src="https://placehold.co/320x320" alt="Imagem genérica de notícia">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque quae eaque delectus cum autem asperiores optio reprehender</h3>
+                    </a>
+                </article>
+                <article class="noticia">
+                    <a href="#">
+                        <img src="https://placehold.co/320x320" alt="Imagem genérica de notícia">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque quae eaque delectus cum autem asperiores optio reprehender</h3>
+                    </a>
+                </article>
+                <article class="noticia">
+                    <a href="#">
+                        <img src="https://placehold.co/320x320" alt="Imagem genérica de notícia">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque quae eaque delectus cum autem asperiores optio reprehender</h3>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+        <aside>
+            <section class="novidades">
+                <h2>Novidades</h2>
+                <a href="#">
+                    <img src="https://placehold.co/320x320" alt="Imagem genérica de novidade">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing. Exercitationem cumque quae eaque delectus cum autem asperiores optio reprehender</h3>
+                </a>
+            </section>
+
+            <section class="novidades">
+                <h2>Novidades</h2>
+                <a href="#">
+                    <img src="https://placehold.co/320x320" alt="Imagem genérica de novidade">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing. Exercitationem cumque quae eaque delectus cum autem asperiores optio reprehender</h3>
+                </a>
+            </section>
+
+            <section class="novidades">
+                <h2>Novidades</h2>
+                <a href="#">
+                    <img src="https://placehold.co/320x320" alt="Imagem genérica de novidade">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing. Exercitationem cumque quae eaque delectus cum autem asperiores optio reprehender</h3>
+                </a>
+            </section>
+        </aside>
+    </div>
+
+    <!-- Importa jQuery da CDN do site oficial -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        // Aguarda o carregamento do documento para rodar o código
+        $(document).ready(function(){
+            // Quando o botão de menu for clicado
+            $('.botao-menu').click(function(){
+                // Mostra ou esconde o menu principal com animação
+                $('.menu').slideToggle();
+            });
+        });
+    </script>
 </body>
 </html>
