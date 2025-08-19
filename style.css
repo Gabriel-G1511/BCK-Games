@@ -1,205 +1,236 @@
-/* Aplica a todos os elementos da página */
 * {
-    box-sizing: border-box; /* Faz o tamanho das caixas contar a borda e o padding */
-    margin: 0;              /* Remove as margens padrão */
-    padding: 0;             /* Remove o espaçamento interno padrão */
-    font-family: Roboto, sans-serif; /* Define a fonte da página */
+    box-sizing: border-box;
+    list-style: none;
 }
 
-/* Define largura e centraliza o container principal */
-.container {
-    width: 100%;        /* Ocupa toda largura disponível */
-    max-width: 1024px;  /* Limita a largura máxima para 1024 pixels */
-    margin: 0 auto;     /* Centraliza horizontalmente */
+body {
+    background-color: #1c1c1c; /* fundo cinza escuro */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #eee; /* texto claro */
 }
 
-/* Header que tem a classe container */
-header.container {
-    display: flex;                /* Organiza os filhos em linha */
-    justify-content: space-around; /* Espaça igualmente os filhos */
-    align-items: center;          /* Alinha verticalmente ao centro */
-}
-
-/* Estilo geral do header */
 header {
-    padding: 16px 0 0;            /* Espaçamento interno: cima 16px, lados 0, baixo 0 */
-    border-bottom: 1px solid #ccc; /* Linha fina embaixo do header */
-    margin-bottom: 56px;          /* Espaço abaixo do header */
+    background-color: #3a3a3a; /* cinza metálico escuro */
+    color: white;
+    padding: 10px 0;
+    border-bottom: 4px solid #df0a0a; /* detalhe vermelho */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Submenu oculto inicialmente */
-.submenu {
-    display: none;               /* Esconde o submenu */
-    border: 1px solid red;       /* Borda vermelha para visualização */
-    background-color: #fff;      /* Fundo branco */
-    position: absolute;          /* Posiciona em relação ao elemento pai */
-    left: 0;                    /* Alinha à esquerda */
-    width: 100px;               /* Largura fixa */
-    top: 100%;                  /* Posiciona logo abaixo do pai */
-}
-
-/* Itens do menu principal */
-.menu > li {
-    float: left;                /* Alinha os itens em linha à esquerda */
-    list-style: none;           /* Remove os marcadores padrão */
-    padding: 16px;              /* Espaçamento interno */
-    border-top: 4px solid transparent; /* Linha invisível em cima para efeito */
-    position: relative;          /* Para posicionar o submenu depois */
-}
-
-/* Limpa o float para evitar problemas de layout */
-.clear {
-    clear: both;
-}
-
-/* Quando passar o mouse no item do menu */
-.menu li:hover {
-    border-color: red;          /* A borda superior fica vermelha */
-}
-
-/* Quando passar o mouse no item do menu, mostra o submenu */
-.menu li:hover .submenu {
-    display: block;             /* Mostra o submenu */
-}
-
-/* Itens dentro do submenu */
-.submenu li {
-    display: block;             /* Cada item ocupa linha inteira */
-    padding: 8px;               /* Espaçamento interno menor */
-}
-
-/* Área de conteúdo principal dividida em duas colunas */
-.conteudo {
-    display: grid;              /* Usa grid para organizar */
-    grid-template-columns: 70% 30%; /* 70% para a primeira coluna e 30% para a segunda */
-}
-
-/* Imagens dentro de notícia ficam no máximo na largura do container */
-.noticia img {
-    max-width: 100%;
-}
-
-/* Espaço extra abaixo da seção destaque */
-.destaque {
-    margin-bottom: 56px;
-}
-
-/* Link dentro da notícia destaque fica em linha flexível */
-.destaque .noticia a {
+/* Seção loja */
+.loja {
     display: flex;
-    font-size: 2em;             /* Texto maior */
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 10vh auto;
+    text-align: left;
+    background-color: #2e2e2e; /* fundo cinza metálico */
+    padding: 20px;
+    border-radius: 8px;
 }
 
-/* Espaçamento entre a imagem e o texto dentro da notícia destaque */
-.destaque .noticia img {
-    margin-right: 8px;
+.loja img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Espaço abaixo dos títulos h2 dentro de sections */
-section h2 {
-    margin-bottom: 32px;
+.loja .descricao {
+    flex: 1;
 }
 
-/* Espaço interno à esquerda da barra lateral */
-aside {
-    padding-left: 40px;
+/* Seção produtos */
+.produtos {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+    /* Centraliza o título da seção acima das imagens */
+    .produtos-titulo {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 10px 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #fff;
+        display: block;
+        order: -1; /* garante que fique acima dos produtos em flex/grid */
+    }
+
+.produto {
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    background: #2c2c2c; /* card cinza metálico */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    color: #eee;
 }
 
-/* Espaço entre notícias dentro do aside */
-aside .noticia {
-    margin-bottom: 24px;
+.produto img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* Área com várias notícias em grid, 3 colunas */
-.noticias {
-    display: grid;
-    grid-template-columns: repeat(3, 32.6%); /* 3 colunas iguais com espaço */
-    column-gap: 1%;     /* Espaço entre colunas */
-    row-gap: 5%;        /* Espaço entre linhas */
+.produto h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
 }
 
-/* Começo das regras para telas pequenas (celulares) */
-@media (max-width: 767px) {
-    /* Pode colocar regras aqui para telas pequenas */
+.produto p {
+    margin: 0 0 10px;
+    color: #ccc;
+    font-size: 14px;
 }
 
-/* Regras específicas para telas pequenas (celular) */
-@media (max-width: 767px) {
-    .conteudo {
-        display: block;  /* Coloca tudo em bloco (uma coisa abaixo da outra) */
-        /* grid-template-columns removido porque não funciona com display block */
-    }
-    .container {
-        max-width: 90%;  /* Container um pouco menor */
-    }
-    .destaque {
-        margin-bottom: 56px; /* Mantém espaçamento */
-    }
-    .destaque .noticia a {
-        display: block;   /* Link em bloco, ocupa linha inteira */
-        font-size: 1.5em; /* Tamanho de fonte menor que antes */
-    }
-    .destaque .noticia img {
-        margin-right: 0;  /* Sem margem à direita */
-    }
-    .noticia {
-        display: block;   /* Notícia ocupa linha inteira */
-    }
-    .noticias .noticia {
-        margin-bottom: 32px; /* Espaço maior entre notícias */
-    }
-    aside {
-        padding-left: 0;  /* Remove espaçamento da barra lateral */
-    }
-    header div .container {
-        flex-direction: column; /* Coloca os filhos em coluna (vertical) */
-    }
-    .submenu {
-        display: block;    /* Mostra o submenu sempre */
-        width: 100px;      /* Largura fixa */
-        position: relative; /* Posicionamento normal */
-        border: none;       /* Sem borda */
-    }
-    .menu {
-        display: none;    /* Esconde o menu principal */
-    }
-    .menu > li {
-        clear: both;      /* Limpa o float para cada item */
-    }
-    .submenu li {
-        display: block;   /* Itens do submenu ficam em bloco */
-        padding: 8px;     /* Espaçamento interno */
-    }
-    .botao-menu {
-        display: flex;        /* Botão fica flexível para centralizar */
-        justify-content: center; /* Centraliza horizontalmente */
-        margin-top: 16px;     /* Espaço acima */
-        padding-bottom: 16px; /* Espaço abaixo */
-    }
-    .botao-menu button {
-        padding: 8px;        /* Espaço interno no botão */
-    }
+a {
+    color: #e74c3c; /* vermelho metálico */
+    text-decoration: none;
 }
 
-/* Regras para telas médias (tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        max-width: 90%;      /* Container menor */
-    }
-    .botao-menu {
-        display: none;       /* Esconde o botão do menu */
-    }
-    .destaque .noticia a {
-        font-size: 1.5em;    /* Fonte um pouco menor */
-    }
-    .noticias {
-        grid-template-columns: repeat(2, 49%); /* Duas colunas quase 50% */
-    }
+a:hover {
+    text-decoration: underline;
 }
 
-/* Regras para telas grandes (desktop) */
-@media (min-width: 1024px) {
-    .botao-menu {
-        display: none;       /* Esconde botão do menu */
+.produto .preco {
+    font-weight: bold;
+    color: #df1d1d; /* vermelho nos preços */
+    margin-bottom: 10px;
+}
+
+.produto button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #df0a0a; /* botão vermelho */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.produto button:hover {
+    background: #a00606; /* vermelho mais escuro no hover */
+}
+
+/* --- Responsividade --- */
+
+/* Tablets */
+/* ============================= */
+/*   AJUSTE PARA TABLETS         */
+/*   Largura entre 641px e 1024px*/
+/* ============================= */
+/* ============================= */
+/*   AJUSTE PARA TABLETS         */
+/*   Largura entre 641px e 1024px*/
+/* ============================= */
+/* ============================= */
+/*   AJUSTE PARA TABLETS         */
+/*   Largura entre 641px e 1024px*/
+/* ============================= */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    /* Altera o layout dos produtos para duas colunas, cada uma com 43% da largura da tela */
+    .produtos {
+        display: flex; /* usa flexbox ao invés de grid */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px; /* espaço entre os cards */
+        width: 100vw;
+    }
+
+    .produto {
+        width: 43vw; /* cada card ocupa 43% da largura da viewport */
+        max-width: 350px; /* limite máximo para não ficar exagerado em telas grandes */
+        min-width: 220px; /* limite mínimo para não ficar muito pequeno */
+        box-sizing: border-box;
+    }
+
+    .produtos img {
+        width: 100%; /* imagem ocupa toda a largura do card */
+        height: auto;
+    }
+
+    /* Mantém responsividade e centralização da loja */
+    .loja {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .loja img {
+        width: 80%; /* reduz a largura da imagem */
+        max-width: 400px; /* limite máximo */
+    }
+    .loja .descricao {
+        margin-top: 20px;
+        text-align: center;
+        align-items: baseline;
+    }
+    .loja .descricao h2 {
+        font-size: 1.6rem; /* tamanho do título */
+    }
+    .loja .descricao p {
+        font-size: 1.2rem; /* tamanho da descrição */
+    }
+    /* Centraliza o título da seção */
+    .produtos-titulo {
+        grid-column: span 2; /* ocupa as duas colunas */
+        text-align: center;
+        margin: 30px 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+
+    /* Centraliza o título da seção */
+    .produtos-titulo {
+        grid-column: span 2; /* ocupa as duas colunas */
+        text-align: center;
+        margin: 20px 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+    .loja {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto {
+        flex: 1 1 90%; /* 1 por linha */
+    }
+
+    .loja img {
+        max-width: 90vw;
+        height: auto;
+    }
+
+    article {
+        max-width: 90vw;
     }
 }
+    /* Centraliza o título da seção */
+    .produtos-titulo {
+        grid-column: span 2; /* ocupa as duas colunas */
+        text-align: center;
+        margin: 20px 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #fff;
+    }
