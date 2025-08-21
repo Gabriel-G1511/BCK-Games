@@ -1,10 +1,22 @@
-Site BCK Games
-um site ficticio de jogos tarefa do curso ebac sobre responsividade
-Objetivo:• Criar um layout responsivo de uma loja virtual;
+BCK Games é um site fictício de uma loja de jogos, desenvolvido como parte do curso de Front-End da EBAC. O projeto tem como objetivo praticar conceitos de layout responsivo e publicação de aplicações web.
 
-• Criar uma seção “sobre a loja”, nesta seção teremos duas colunas uma com a imagem da loja e outra com um texto;
+🔹 Objetivos do projeto:
 
-• Criar uma seção de produtos onde haverá uma listagem de 4 produtos, lado a lado, com a imagem, nome e descrição do produto e um botão para adicionar ao carrinho;
+Criar um layout responsivo de uma loja virtual.
 
-• Seguir as adaptações de layout propostas e fazer a publicação na Vercel nos enviando link do projeto. 
+Implementar a seção “Sobre a loja”, com duas colunas (imagem + texto).
 
+Criar uma seção de produtos, exibindo 4 itens lado a lado, com: imagem, nome, descrição e botão para adicionar ao carrinho.
+
+Adaptar o layout conforme diferentes tamanhos de tela (desktop, tablet, mobile).
+
+Publicar o site na Vercel.
+
+🔹 Tecnologias utilizadas:
+
+HTML5
+
+CSS3 (Flexbox e Grid)
+
+🔹 Deploy: Link na Vercel
+ (adicione aqui o link quando estiver publicado)
